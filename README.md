@@ -5,6 +5,8 @@ This module provides tools to preprocess two types of datasets: Excel spreadshee
 ## Excel Data Preprocessing
 Include info on the methods
 
+## Text Data Preprocessing
+
 ## Image Data Preprocessing
 Include info on the methods
 
