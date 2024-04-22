@@ -13,41 +13,40 @@ PyPreprocessor is a comprehensive Python library designed to facilitate the prep
 
 ## Usage
 
-This section provides basic instructions on how to use PyPreprocessor to preprocess various types of data. You can extend these examples based on your specific project requirements.
-
-### Preprocessing Image Data
-
-Here is how to preprocess image files using PyPreprocessor:
+Below is a simple example demonstrating how to use PyPreprocessor to preprocess an Excel dataset.
 
 ```python
 from pypreprocessor_lib import DatasetPreprocessor
+import pandas as pd
 
-# Specify the path to your image file
-path = 'path_to_your_image.jpg'
-preprocessor = DatasetPreprocessor(path)
+# Load data
+df = pd.read_csv("/path/to/your/data.csv")
+print('Initial Shape of Data:', df.shape)
 
-# Preprocess the image
-preprocessed_data = preprocessor.preprocess()
+# Initialize preprocessor
+preprocessor = DatasetPreprocessor('/path/to/your/data.csv')
 
-# Output the shape of the processed image data
-print(preprocessed_data.shape)
-
-### Preprocessing Excel Data
-
-To preprocess data from an Excel file:
-
-```python
-from pypreprocessor_lib import DatasetPreprocessor
-
-# Specify the path to your Excel file
-path = 'path_to_your_excel_file.csv'
-preprocessor = DatasetPreprocessor(path, target_label='YourTargetColumn')
-
-# Preprocess the data
-preprocessed_data = preprocessor.preprocess()
-
-# Display the first few rows of the processed data
+# Preprocess data
+preprocessed_data = preprocessor.preprocess(target_label='YourTargetLabel')
 print(preprocessed_data.head())
+```
+## Contributors
+
+- **Riddhi Gupta**: Developed image preprocessing techniques.
+- **Anushka Jami**: Designing  preprocessing methods for categorical and text data.
+- **Lohith Vardireddygari**: Developed Excel data preprocessing functionalities.
+
+
+## Acknowledgements
+
+Thanks to the following resources that have been instrumental for this project:
+- [Data Cleaning Using Pandas](https://www.analyticsvidhya.com/blog/2021/06/data-cleaning-using-pandas/)
+- [Top Ten Ways to Clean Your Data](https://support.microsoft.com/en-us/office/top-ten-ways-to-clean-your-data)
+- [Cleaning Image Dataset](https://visual-layer.readme.io/docs/cleaning-image-dataset)
+- [Video Games Dataset](https://www.kaggle.com/datasets/shivamvadalia27/video-games)
+- [Banana Dataset](https://www.kaggle.com/datasets/l3llff/banana)
+
+  
 
 
 
